@@ -1,0 +1,17 @@
+{
+  "name": "master-of-forums",
+  "version": "1.0.0",
+  "description": "Master of Forums",
+  "main": "index.js",
+  "homepage": "https://master-of-forums.github.io/",
+  "repository": "https://github.com/master-of-forums/master-of-forums",
+  "author": "admin <admin@example.com>",
+  "license": "MPL",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}

@@ -1,0 +1,15 @@
+env:
+  browser: true
+  es2021: true
+  greasemonkey: true
+extends:
+  - airbnb-base
+parserOptions:
+  ecmaVersion: 13
+  sourceType: module
+rules:
+  camelcase: off
+  max-len: off
+  no-plusplus: off
+  no-restricted-syntax: off
+  no-undef: off

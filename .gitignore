@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+.node_modules/
+
+# Editor
+.idea/
+.vscode/
+
+# Tests
+tests/
+
+# Cache
+.cache
+
+# Runtime data
+*.lock
+
+# Backup
+*.backup
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# Logs
+*.log
