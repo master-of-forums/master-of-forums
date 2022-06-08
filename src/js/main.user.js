@@ -2865,6 +2865,7 @@ const MASTER_OF_FORUMS = () => {
         '\u{6C5F}\u{6CFD}\u{6C11}',
         '\u{6C7D}\u{67AA}',
         '\u{6C7D}\u{72D7}',
+        '\u{6CC4}\u{9898}',
         '\u{6CD5}\u{4F1A}',
         '\u{6CD5}\u{6B63}',
         '\u{6CD5}\u{8BBA}',
