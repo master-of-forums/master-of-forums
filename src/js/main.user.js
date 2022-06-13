@@ -978,19 +978,21 @@ const MASTER_OF_FORUMS = () => {
     });
 
     const fileData = new FormData();
-    fileData.append('image', FILE);
-    fileData.append('cm', 100672);
+    fileData.append('app_id', 1);
+    fileData.append('article_type', 'news');
+    fileData.append('type', 'image');
+    fileData.append('media', FILE);
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('emhpZGFvLmJhaWR1LmNvbQ==')}/submit/ajax`,
+      url: `https://${atob('YmFpamlhaGFvLmJhaWR1LmNvbQ==')}/pcui/picture/upload`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
         if (response.readyState === 4 && response.status === 200) {
           const content = JSON.parse(response.responseText);
-          if (content.errorNo === '0' && content.url && content.errorMsg === '') {
-            [content.url] = content.url.split('?');
+          if (content.errno === 0 && content.errmsg === 'success' && content.ret?.https_url) {
+            content.url = content.ret.https_url;
             GM_setClipboard(content.url, 'text');
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
@@ -1005,13 +1007,20 @@ const MASTER_OF_FORUMS = () => {
             });
             // Append to Textarea
             MAIN.fn?.fileUploadAppendToTextarea(content.url);
-          } else if (content.errorMsg) {
+          } else if (content.errmsg) {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
-              text: content.errorMsg,
+              text: content.errmsg,
               image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
+            if (content.errmsg === '\u{5F53}\u{524D}\u{7528}\u{6237}\u{672A}\u{767B}\u{5F55}') {
+              setTimeout(() => {
+                GM_openInTab('https://passport.baidu.com/', {
+                  active: true,
+                });
+              }, 1000);
+            }
           } else {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
