@@ -12,7 +12,7 @@
   // console.log('\u{1F50A}Handler is', HANDLER);
   // console.log('\u{1F50A}Version is', VERSION);
 
-  if (VERSION < 20220606 && Math.random() < 0.01) {
+  if (VERSION < 20220613 && Math.random() < 0.01) {
     let can = true;
     setTimeout(() => {
       fetch('https://www.facebook.com/security/hsts-pixel.gif').then(() => {

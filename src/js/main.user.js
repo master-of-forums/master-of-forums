@@ -490,7 +490,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20220606,
+    version: 20220613,
     window: {},
   };
 
@@ -1328,6 +1328,10 @@ const MASTER_OF_FORUMS = () => {
       GM_xmlhttpRequest({
         method: 'POST',
         url: `https://${atob('dXBsb2FkLmFpY2hhdC5uZXQ=')}/upload/single`,
+        headers: {
+          origin: `https://${atob('cmVzb3VyY2UuYWljaGF0Lm5ldA==')}`,
+          referer: `https://${atob('cmVzb3VyY2UuYWljaGF0Lm5ldA==')}/`,
+        },
         data: fileData,
         timeout: 60 * 1000,
         onload: (response) => {
