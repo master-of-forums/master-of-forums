@@ -490,7 +490,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20220613,
+    version: 20220616,
     window: {},
   };
 
@@ -978,14 +978,11 @@ const MASTER_OF_FORUMS = () => {
     });
 
     const fileData = new FormData();
-    fileData.append('app_id', 1);
-    fileData.append('article_type', 'news');
-    fileData.append('type', 'image');
     fileData.append('media', FILE);
 
     GM_xmlhttpRequest({
       method: 'POST',
-      url: `https://${atob('YmFpamlhaGFvLmJhaWR1LmNvbQ==')}/pcui/picture/upload`,
+      url: `https://${atob('YmFpamlhaGFvLmJhaWR1LmNvbQ==')}/builderinner/api/content/file/upload`,
       data: fileData,
       timeout: 10 * 1000,
       onload: (response) => {
@@ -1014,13 +1011,6 @@ const MASTER_OF_FORUMS = () => {
               image: GM_getResourceURL('MainICON'),
               timeout: 4 * 1000,
             });
-            if (content.errmsg === '\u{5F53}\u{524D}\u{7528}\u{6237}\u{672A}\u{767B}\u{5F55}') {
-              setTimeout(() => {
-                GM_openInTab('https://passport.baidu.com/', {
-                  active: true,
-                });
-              }, 1000);
-            }
           } else {
             GM_notification({
               title: '\u{8BBA}\u{575B}\u{5927}\u{5E08}',
