@@ -2049,11 +2049,11 @@ const MASTER_OF_FORUMS = () => {
                   </div>
                   <div class="discussion-list-item-content">
                     <div>
-                      <span class="content-username"><a href="${i.userId === 0 ? GM_info.script?.homepage : `//${DOMAIN}/host/user/${i.userName}.html`}" target="_blank">${i.userName ? i.userName : '\u{533F}\u{540D}'}</a></span>&nbsp;<span class="content-bull">&bull;</span>&nbsp;<time class="content-time" pubdate data-date="${i.discussionDate}">${i.discussionTime || i.discussionDate}</time>
+                      <span class="content-username"><a href="${i.userId === 0 ? GM_info.script?.homepage : `/space-username-${i.userName}.html`}" target="_blank">${i.userName ? i.userName : '\u{533F}\u{540D}'}</a></span>&nbsp;<span class="content-bull">&bull;</span>&nbsp;<time class="content-time" pubdate data-date="${i.discussionDate}">${i.discussionTime || i.discussionDate}</time>
                       <span class="content-count">\u{1F4AC}<samp>${String(i.discussionCount).padStart(3, ' ').replaceAll(' ', '&nbsp;')}</samp></span>
                     </div>
                     <div>
-                      <span class="content-title"><a href="thread-${i.discussionId}-1-1.html">${i.discussionTitle}</a><span class="content-permission">${i.discussionReadPermission === 0 ? '' : `〖\u{9605}\u{8BFB}\u{6743}\u{9650}：<samp>${i.discussionReadPermission}</samp>〗〖<a href="//${atob('MzY5MzY5Lnh5eg==')}/host/topic/${i.discussionId}.html" target="_blank">\u{8BDD}\u{9898}\u{5907}\u{4EFD}</a>〗`}</span></span>
+                      <span class="content-title"><a href="thread-${i.discussionId}-1-1.html">${i.discussionTitle}</a><span class="content-permission">${i.discussionReadPermission === 0 ? '' : `〖\u{9605}\u{8BFB}\u{6743}\u{9650}：<samp>${i.discussionReadPermission}</samp>〗〖<a href="//${DOMAIN}/host/topic/${i.discussionId}.html" target="_blank">\u{8BDD}\u{9898}\u{5907}\u{4EFD}</a>〗`}</span></span>
                     </div>
                   </div>
                 </div>`;
