@@ -2053,7 +2053,7 @@ const MASTER_OF_FORUMS = () => {
                       <span class="content-count">\u{1F4AC}<samp>${String(i.discussionCount).padStart(3, ' ').replaceAll(' ', '&nbsp;')}</samp></span>
                     </div>
                     <div>
-                      <span class="content-title"><a href="thread-${i.discussionId}-1-1.html">${i.discussionTitle}</a><span class="content-permission">${i.discussionReadPermission === 0 ? '' : `〖\u{9605}\u{8BFB}\u{6743}\u{9650}：<samp>${i.discussionReadPermission}</samp>〗`}${i.discussionTitle.endsWith('</del>') ? '〖\u{5DF2}\u{88AB}\u{5220}\u{9664}〗' : ''}${i.discussionReadPermission !== 0 || i.discussionTitle.endsWith('</del>') ? `〖<a href="//${DOMAIN}/host/topic/${i.discussionId}.html" target="_blank">\u{8BDD}\u{9898}\u{5907}\u{4EFD}</a>〗` : ''}</span></span>
+                      <span class="content-title"><a href="thread-${i.discussionId}-1-1.html">${i.discussionTitle}</a><span class="content-permission">${i.discussionReadPermission === 0 ? '' : `〖\u{9605}\u{8BFB}\u{6743}\u{9650}：<samp>${i.discussionReadPermission}</samp>〗`}${i.discussionTitle.endsWith('</del>') ? '〖\u{5DF2}\u{88AB}\u{5220}\u{9664}〗' : ''}${i.discussionReadPermission !== 0 || i.discussionTitle === '255' || i.discussionTitle.endsWith('</del>') ? `〖<a href="//${DOMAIN}/host/topic/${i.discussionId}.html" target="_blank">\u{8BDD}\u{9898}\u{5907}\u{4EFD}</a>〗` : ''}</span></span>
                     </div>
                   </div>
                 </div>`;
