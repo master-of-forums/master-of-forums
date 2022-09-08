@@ -490,7 +490,7 @@ const MASTER_OF_FORUMS = () => {
     },
     repository: 'https://github.com/master-of-forums/master-of-forums',
     tips: {},
-    version: 20220620,
+    version: 20220909,
     window: {},
   };
 
@@ -2976,7 +2976,7 @@ const MASTER_OF_FORUMS = () => {
       MAIN.data.hostname = 'v2ex.com';
       break;
 
-    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net'].includes(HOSTNAME):
+    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net', 'hostloc.me', 'www.hostloc.me', 'hostloc.pw', 'www.hostloc.pw'].includes(HOSTNAME):
       MAIN.data.hostname = 'hostloc.com';
       break;
 
