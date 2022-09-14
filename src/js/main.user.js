@@ -2976,7 +2976,7 @@ const MASTER_OF_FORUMS = () => {
       MAIN.data.hostname = 'v2ex.com';
       break;
 
-    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net', 'hostloc.me', 'www.hostloc.me', 'hostloc.pw', 'www.hostloc.pw'].includes(HOSTNAME):
+    case ['hostloc.com', 'www.hostloc.com', '91ai.net', 'www.91ai.net', 'hostloc.me', 'www.hostloc.me', 'hostloc.pw', 'www.hostloc.pw', 'loc.umr.lol'].includes(HOSTNAME):
       MAIN.data.hostname = 'hostloc.com';
       break;
 
