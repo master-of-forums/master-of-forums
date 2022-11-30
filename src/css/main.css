@@ -192,6 +192,10 @@ tt,
   unicode-bidi: bidi-override;
 }
 
+#postlist .blockcode ol li {
+  font-size: 0.75rem;
+}
+
 ignore_js_op img,
 img.zoom,
 img[file] {
